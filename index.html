@@ -4,329 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            font-family: sans-serif;
-            text-transform: capitalize;
-            z-index: 1;
-        }
-        .center{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container{
-            
-            padding:0 2rem;
-            padding-bottom: 1rem;
-            
-            
-        }
-        .header{
-            background-color: lightslategray;
-            text-align: center;
-            padding:.5rem 2rem;
-            margin-bottom: 1rem;
-            position: sticky;
-            top:0;
-            z-index: 2;
-        }
-        .menu{
-            
-            width:100%;
-            display: flex;
-            justify-content: space-around;
-            flex-grow: 1;
-        }
-        .menu .bar a{
-            display: inline-block;
-            font-size:1.7vw;
-            text-decoration:none;
-            color:white;
-            padding:1rem 1rem;
-            text-transform: uppercase;
-        }
-        .menu .bar a:hover{
-           background-color: whitesmoke;
-           color: teal;
-        }
-        .banner{
-            width:100%;
-            height:500px;
-            background-color: blueviolet;
-            color: white;
-            font-size: 2rem;
-            background:url(./img/emile-perron-xrVDYZRGdw4-unsplash.jpg) center no-repeat;
-            background-size: cover;
-            position: relative;
-        }
-        .banner .heading{
-            display: inline-block;
-            position: absolute;
-            top:2%;
-            left:5%;
-            font-size: 4vw;
-            
-            
-        }
-        .images-block{
-           
-            text-align: center;
-            
-
-        }
-        .images-block .image{
-            display:flex;
-            justify-content: space-evenly;
-        }
-        .pic{
-            background-color:orangered;
-            width:10rem;
-            height:10rem;
-            border-radius: 50%;
-            box-shadow: 0 .2rem .7rem rgba(0,0,0,.6);
-            background-size: contain;
-        }
-        .img1{
-            background: url(./img/1.png) center no-repeat;
-        }
-        .img2{
-            background: url(./img/2.png) center no-repeat;
-        }
-        .img3{
-            background: url(./img/3.png) center no-repeat;
-        }
-        .img4{
-            background: url(./img/9.png) center no-repeat;
-        }
-        .split-block{
-            
-            text-align: center;
-            
-            
-        }
-        .split-block .content{
-            display: flex;
-            position: relative;
-            
-        }
-        .split-block .main{
-            width:45rem;
-            height:30rem;
-            background-color: lightslategrey;
-            margin-right: 1rem;
-            color: white;
-            font-size: 1.5rem;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-            
-        }
-        .split-block .main h3{
-            position: absolute;
-            left:2.5%;
-            font-size: 3vw;
-            font-weight: 500;
-        }
-        .split-block .main p{
-            position: absolute;
-            text-align: justify;
-            color: white;
-            top:5rem;
-            font-size:1.8vw;
-            margin:0 1rem;
-            box-sizing: border-box;
-        }
-        .split-block .articles{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width:35rem;
-            flex-grow: 1;
-            
-        }
-        .split-block .article{
-            background-color: orangered;
-            width:100%;
-            height:9rem;
-            text-align: center;
-            color: black;
-            font-size: 1.5rem;
-            
-            
-        }
-        .split-block .one{
-            background: url(./img/p1.jpg) no-repeat;
-            background-size: cover;
-        }
-        .split-block .two{
-            background: url(./img/p2.jpeg)  no-repeat;
-            background-size: cover;
-        }
-        .split-block .three{
-            background: url(./img/p3.jpg)  no-repeat;
-            background-size: cover;
-        }
-        .card-block{
-            text-align: center;
-           
-        }
-        .card-block .cards
-        {
-            display:flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            
-        }
-        .card-block .card{
-            border:.03rem solid rgba(0,0,0,.2);
-            width:15rem;
-            height:25rem;
-            background:blueviolet;
-            margin:1rem 1rem;
-        
-            
-        }
-        .card-block .card img{
-            width:inherit;
-            height:8.5rem;
-        }
-        .card-block .card h1{
-            margin:.5rem  auto;
-            padding:0;
-            font-size: 1rem;
-        }
-        .card-block .card p{
-            text-align: justify;
-            color: white;
-            margin:0 1rem;
-            /* box-sizing: border-box; */
-        }
-        .card-block .card a{
-            display: block;
-            background: red;
-            color: white;
-            font-size: 1.3rem;
-            text-decoration: none;
-            margin:1rem;
-            padding:.5rem 1rem;
-            border-radius: 1rem;
-            transition: all .5s;
-        }
-        .card-block .card a:hover{
-            background: blue;
-            color:black;
-        }
-        .footer-block{
-            text-align: center;
-        }
-        .footer{
-            background-color: lightslategray;
-            text-align: center;
-            font-size: 1rem;
-            color:black;
-            padding:2rem 2rem;
-            
-        }
-        h1,h2{
-            margin:2rem 0;
-            margin-top:8rem;
-            font-size: 2.5vw;
-        }
-        .footer #last{
-            display: block;
-            margin: 1.5rem auto 0;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/prac10style.css">
 </head>
 <body>
-    <a name="top"></a>
     <div class="container">
-        
+        <!-- open button -->
+        <input type="checkbox" id="chk">
+            <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <!-- close button -->
+            <label for="chk" class="hide-btn">
+                <i class="fa fa-times"></i>
+            </label>
         <header class="header">
-            <ul class="menu">
-                <li class="bar center"><a href="#home">Home</a></li>
-                <li class="bar center"><a href="#about-us">About Us</a></li>
-                <li class="bar center"><a href="#team">team</a></li>
-                <li class="bar center"><a href="#techno">technologies</a></li>
-                <li class="bar center"><a href="#contact">contact</a></li>
-            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgZaO_DyXwXsQCZQ8CjcVxD3f0u7qWXKh4Hw&usqp=CAU" alt="">
+            <h1 class="heading">fullstack</h1>
         </header>
-        <div class="banner">
-            <h3 class="heading">Practical-8</h3>
+        <div class="content">
+            <img src="./img/banner.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, deleniti non doloremque numquam quisquam explicabo accusantium praesentium expedita itaque id vitae quae nam ullam! Magnam aspernatur voluptatem, odit provident dolorum voluptatibus beatae dolore recusandae explicabo ex, incidunt veritatis quidem repellendus qui nam minima blanditiis porro, dignissimos maxime accusamus doloribus fugit a eum excepturi. Adipisci enim, mollitia iure aperiam consequuntur fuga delectus ratione dignissimos nostrum dicta veritatis unde dolores esse beatae optio porro impedit asperiores vitae. Doloribus aut delectus voluptatem repellendus corrupti cum velit nemo modi nesciunt quidem tempore soluta omnis fugit aliquid, recusandae earum officia id rerum itaque explicabo perferendis impedit! Necessitatibus, sunt. Facilis dolorum itaque architecto reprehenderit odit unde. A odio blanditiis, omnis recusandae fuga corrupti deserunt nemo praesentium temporibus? Facilis dolore corrupti sapiente sint illo nobis, aperiam magnam voluptatum eum quidem doloremque possimus maiores impedit quam ullam recusandae omnis consequatur repudiandae aspernatur nesciunt, tenetur amet ipsum? Quaerat nihil nisi officiis libero dolorem nam repellat ratione. Eveniet facere exercitationem obcaecati sapiente reprehenderit itaque ad, enim repellat id dicta temporibus accusantium eaque consequatur ipsam iusto, error quis eum minus incidunt sed. Dignissimos nisi ullam dicta beatae porro corporis voluptates architecto consequatur maxime unde mollitia esse earum vero fugiat dolorem vitae necessitatibus, eos aspernatur itaque molestias in. Vitae, molestiae aspernatur atque facere neque veniam voluptatem saepe eligendi voluptates facilis culpa quibusdam totam voluptate consectetur tenetur odio optio laudantium, omnis animi! Culpa, omnis illo necessitatibus vero minus harum ea veritatis accusantium asperiores assumenda molestias labore corporis, optio ullam ipsa animi inventore, incidunt fuga voluptatum. Quas soluta rem praesentium mollitia illum, veniam recusandae quos quis sit corrupti vero optio excepturi ullam amet sequi id odit cumque quisquam eum non hic aliquid perspiciatis laboriosam. Voluptate repudiandae fugit dolores, fugiat aliquid culpa ipsum vel, impedit exercitationem earum libero eum corporis a sapiente tempora veritatis ullam nulla quisquam beatae nihil. Quasi provident sequi ratione soluta porro consequuntur repellendus, natus ea laudantium laborum possimus, repudiandae placeat, delectus vero minima. Libero atque sint, minima soluta doloribus deserunt voluptatem temporibus tenetur a commodi vero harum expedita at nemo. Aliquid numquam cumque ex ut nesciunt beatae quae sapiente vel fugit aperiam magni repellat quisquam, optio libero assumenda porro quibusdam aspernatur neque facere ab mollitia? Laboriosam, cum porro amet doloribus deleniti, voluptas omnis nemo accusamus consectetur dolores aliquam fuga ratione! Sit odit, id qui molestias hic dolores eveniet quibusdam itaque, velit aspernatur, mollitia ipsa libero inventore ut nisi nesciunt excepturi. Rem, maiores! Debitis, quasi quos nam reprehenderit odio quis eos iusto, molestiae veritatis cumque quae delectus quod minima corporis eum voluptates ipsa, repellat quibusdam iure! Iure distinctio aut odit adipisci dolor earum error eligendi. Molestias at quos dolorum doloremque voluptas ex sit eveniet sequi eius? Soluta necessitatibus magnam reiciendis, corrupti odio amet similique voluptatibus repellat harum at praesentium ducimus ipsa. Eos quam quasi repellat nulla, sequi est obcaecati magnam assumenda magni provident maiores nihil? Perspiciatis praesentium rerum sint, odio fuga at, minus laborum eaque nulla magni aut optio autem eligendi maxime aperiam illum expedita repellat. Facere, veritatis. Ea ut qui numquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nihil quam suscipit a sapiente optio exercitationem qui sint recusandae omnis animi, esse, laborum ab ad eius tempore, rem sit expedita est quibusdam perferendis doloribus cupiditate. Minus, aperiam amet nostrum excepturi repellendus exercitationem ea animi earum numquam blanditiis accusantium? Id eius ipsum maiores, quia libero, ut praesentium quis, ab velit recusandae odit modi fuga saepe natus minus quidem! Quidem repellendus unde ipsam, similique distinctio quas. Aliquid obcaecati minima quisquam nostrum, vero sint. Sint, ab ratione. Facilis suscipit facere quasi. Deserunt quis nihil, ipsa nesciunt eaque voluptate. Et adipisci rerum consectetur voluptatem at! Rem, voluptatem ea sed fugit nemo fuga reprehenderit ipsa unde provident, quo nulla iure error modi consequuntur, maxime officia consectetur libero recusandae aut quae perspiciatis animi. Fugiat doloremque reprehenderit obcaecati enim blanditiis nulla saepe magnam magni nesciunt, aperiam non voluptatem earum mollitia molestias ratione, et iste, eveniet vero iusto id rem asperiores necessitatibus consequuntur aliquam! Velit, voluptas voluptates sequi possimus in earum quidem corporis, dolores delectus pariatur voluptatem? Autem magni voluptatem ducimus vero aliquam, sed possimus voluptatum, quis doloremque, nihil corrupti consequatur et quos odit? Reiciendis velit atque eius facilis blanditiis necessitatibus iusto labore nobis dolore sapiente provident dolorem harum fugit ratione error illo, obcaecati molestiae. Dolor animi beatae modi voluptate quae praesentium veritatis aspernatur, rerum accusamus? Maxime quidem adipisci quibusdam illo minima totam! Aut architecto quo minima officiis nulla maiores qui commodi aperiam, iure consectetur ut vitae eum blanditiis amet at odio! Quasi praesentium ullam corporis debitis, voluptatibus fugiat ab iste ut vel nihil reprehenderit excepturi placeat iure! Unde in alias nostrum consectetur temporibus magni adipisci dolorem illo provident? Blanditiis perspiciatis suscipit eum commodi sint vitae ipsum eius iusto adipisci dignissimos, ea debitis quo facere, voluptas consequuntur necessitatibus porro consectetur impedit voluptate quis minima. Libero at adipisci nihil minus eveniet, deserunt laudantium ipsum, optio veritatis doloribus ut necessitatibus eligendi minima itaque esse, ratione ab dolorum dolores accusamus ad. Nesciunt ut exercitationem quae laudantium. Mollitia, veritatis quaerat minima neque dolores saepe perspiciatis alias itaque necessitatibus sapiente ullam pariatur quia, dolorem, impedit dolore reiciendis! Aliquam maiores deleniti libero quos omnis beatae ab aut numquam veritatis dolores ipsam quo, magni totam illum accusamus similique laborum id quasi. Qui cumque cum nostrum recusandae ut sed unde minima, facere fugiat numquam officia nemo est, nihil aliquam, mollitia quas incidunt vitae. Doloremque quaerat vero at tenetur numquam consequatur vel voluptatem minus laudantium, quae ipsam aliquid, quisquam neque temporibus error tempore doloribus nemo accusantium sit architecto, nesciunt praesentium optio ipsa incidunt? Odit quas adipisci fugiat voluptatibus aliquid cum perferendis delectus! Illo itaque optio sunt? Cumque, minus dignissimos magni corporis eaque ducimus in dolores maxime, tempora totam eius soluta cum blanditiis sequi delectus repellendus asperiores. Commodi necessitatibus maiores iure, odit ratione cupiditate, eaque eligendi nemo rerum eveniet unde. Labore at rem vitae aspernatur nobis hic possimus numquam suscipit deserunt facilis dolorum eos commodi provident corrupti, exercitationem accusamus, harum impedit distinctio asperiores earum. Consequatur excepturi explicabo velit eaque odio veritatis atque laborum unde nisi! Hic, eaque suscipit.</p>
         </div>
-        <a name="team"></a>
-        <section class="images-block">
-            <h1 class="image-heading">Team Members</h1>
-            <div class="image">
-                <div class="pic img1"></div>
-                <div class="pic img2"></div>
-                <div class="pic img3"></div>
-                <div class="pic img4"></div>
-            </div>
+        <div class="sidebar">   
             
-        </section>
-        <a name="about-us"></a>
-        <section class="split-block">
-            
-            <h1 class="split-heading">About Us</h1>
-            <div class="content">
+            <ul>
                 
-                <div class="main ">
-                    <h3>About Projects</h3>
-                    <p class="paragraph">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, alias tenetur corporis provident accusamus nesciunt aperiam quas ipsa nostrum pariatur.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur perspiciatis facere voluptatem aut explicabo, culpa fuga numquam, quo incidunt illo necessitatibus laudantium a reprehenderit libero placeat dolor quod cum expedita nobis deserunt! Sunt architecto quae a fugiat obcaecati cumque autem officia exercitationem adipisci voluptate quibusdam soluta, minus consequuntur eius veniam.
-                    </p>
-                </div>
-                <div class="articles">
-                    <div class="article one">Project-1</div>
-                    <div class="article two">Project-2</div>
-                    <div class="article three">Project-3</div>
-                </div>
-            </div>
-            
-        </section>
-        <a name="techno"></a>
-        <section class="card-block">
-            <h1 class="card-heading">Technologies Used</h1>
-            <div class="cards">
-                <div class="card">
-                    <img src="./img/html.png" alt="html image">
-                    <h1 class="heading">Introduction To Html</h1>
-                    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error corrupti velit similique. Nemo quibusdam totam libero cum dolorem mollitia autem, corrupti tempora. Architecto aut recusandae, ut magnam dolores ab facere.</p>
-                    <a href="#">Read More</a>
-                </div>
-                <div class="card"><img src="./img/css.jpeg" alt="Css image">
-                    <h1 class="heading">Introduction To Css</h1>
-                    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error corrupti velit similique. Nemo quibusdam totam libero cum dolorem mollitia autem, corrupti tempora. Architecto aut recusandae, ut magnam dolores ab facere.</p>
-                    <a href="#">Read More</a></div>
-                <div class="card"><img src="./img/js.png" alt="js image">
-                    <h1 class="heading">Introduction To Javascript</h1>
-                    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error corrupti velit similique. Nemo quibusdam totam libero cum dolorem mollitia autem, corrupti tempora. Architecto aut recusandae, ut magnam dolores ab facere.</p>
-                    <a href="#">Read More</a></div>
-                <div class="card"><img src="./img/B.png" alt=" B image">
-                    <h1 class="heading">Introduction To Bootstrap</h1>
-                    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error corrupti velit similique. Nemo quibusdam totam libero cum dolorem mollitia autem, corrupti tempora. Architecto aut recusandae, ut magnam dolores ab facere.</p>
-                    <a href="#">Read More</a></div>
-            </div>
-            
-        </section>
-        <a name="contact"></a>
-        <div class="footer-block">
-            <h2 class="heading">Contact</h2>
-            
-            <footer class="footer">
-                Website template for Practical-8 &copy; <a href="">Beta-Labs</a>
-                
-                <a href="#top" id="last"> Back to top</a>
-            </footer>
+                <li><a href="#"><i class="fa fa-home"><span>home</span></i></a></li>
+                <li><a href="#"><i class="fa fa-user"><span>about</span></i></a></li>
+                <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+                <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+
+            </ul>
         </div>
-        
-        
     </div>
 </body>
 </html>
