@@ -1,216 +1,342 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical12</title>
+    <title>Practical-11</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        body {
-            min-width: 100%;
-            background-color: lightgrey;
-        }
-        
-        .wrapper {
-            width: 580px;
-            background-color: white;
-            padding: 10px;
-            margin: 20px auto;
-        }
-        
-        .custom {
-            width: 100%;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-        
-        .basic {
-            background-color: lightgreen;
-        }
-        
-        .plus {
-            background-color: lightskyblue;
-        }
-        
-        .deluxe {
-            background-color: #63967a;
-        }
-        
-        .pro {
-            background-color: #618db1;
-        }
-        
-        .custom td,
-        .custom th {
-            width: 140px;
-            padding: 8px 5px;
-            text-align: center;
-            border-right: 2px solid white;
-            border-left: 2px solid white;
-        }
-        
-        .custom th {
-            height: 70px;
-            color: #0c062e;
-            font-size: 25px;
-        }
-        
-        i {
-            font-size: 25px;
-            margin-right: 10px;
-        }
-        
-        tbody tr:nth-child(odd),
-        tfoot tr:nth-child(even) {
-            background-color: #f3e6cb;
-        }
-        
-        tfoot tr {
-            line-height: 60px;
-            background-color: cadetblue;
-        }
-        
-        a {
-            text-decoration: none;
-            background-color: #103530;
-            padding: 10px 15px;
-            color: white;
-            border-radius: 10px;
-            font-size: 18px;
-            vertical-align: middle;
-        }
-        
-        a:hover {
-            background-color: rgb(163, 64, 24);
-            color: black;
-            transition: 0.4s;
-        }
-        
-        h2 {
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        
-        tbody tr:first-child td {
-            font-size: 20px;
-            color: rgb(56, 13, 38);
-        }
-    </style>
 </head>
+<style>
+      table{
+        border: 2px solid;
+        border-collapse: collapse;
+        border-color: darkslategray;
 
+      }
+      th,td {
+        padding: 10px;
+      }
+      th {
+        text-align: left;
+      }
+      tr {
+          border: 1px solid grey;
+          
+      }
+      #cap
+      {
+          border: none;
+          background-color: darkslategray;
+          color: white;
+          padding: 15px;
+          font-size: 20px;
+      }
+       td{
+          font-family: 'Times New Roman', Times, serif;
+          border: none;
+          
+      }
+      tr td a
+      {
+          text-decoration: none;
+          color: grey;
+      }
+      #check{
+          color: green;
+          font-weight: bold;
+      }
+   
+    
+      
+</style>
 <body>
-    <div class="wrapper">
-        <h2>
-            Select Your Plan
-        </h2>
-        <table class="custom">
-            <colgroup class="basic"></colgroup>
-            <colgroup class="plus"></colgroup>
-            <colgroup class="deluxe"></colgroup>
-            <colgroup class="pro"></colgroup>
-            <thead>
-                <tr>
-                    <th>
-                        <i class="fa fa-building"></i>Basic
-                    </th>
-                    <th>
-                        <i class="fa fa-superpowers"></i>Plus
-                    </th>
-                    <th>
-                        <i class="fa fa-telegram"></i>Deluxe
-                    </th>
-                    <th>
-                        <i class="fa fa-tachometer"></i>Pro
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Rs. 500/-</td>
-                    <td>Rs. 1500/-</td>
-                    <td>Rs. 2500/-</td>
-                    <td>Rs. 3500/-</td>
-                </tr>
-                <tr>
-                    <td>50 Pages</td>
-                    <td>75 Pages</td>
-                    <td>Unlimited</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>3 Users</td>
-                    <td>5 Users</td>
-                    <td>10 Users</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>10 Sites</td>
-                    <td>25 Sites</td>
-                    <td>100 Sites</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>50 MB</td>
-                    <td>250 MB</td>
-                    <td>1 GB</td>
-                    <td>5 GB</td>
-                </tr>
-                <tr>
-                    <td>Included</td>
-                    <td>Included</td>
-                    <td>Included</td>
-                    <td>Included</td>
-                </tr>
-                <tr>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                </tr>
-                <tr>
-                    <td><img src="./img/icon-x.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                </tr>
-                <tr>
-                    <td><img src="./img/icon-x.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                </tr>
-                <tr>
-                    <td><img src="../img/icon-x.png"></td>
-                    <td><img src="./img/icon-x.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                </tr>
-                <tr>
-                    <td><img src="./img/icon-x.png"></td>
-                    <td><img src="./img/icon-x.png"></td>
-                    <td><img src="./img/icon-x.png"></td>
-                    <td><img src="./img/icon-check.png"></td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td><a href="#">Sign Up</a></td>
-                    <td><a href="#">Sign Up</a></td>
-                    <td><a href="#">Sign Up</a></td>
-                    <td><a href="#">Sign Up</a></td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+    <table width="100%" align="center">
+        <caption id="cap">
+          FullStack Live Practical Book
+        </caption>
+        <tr>
+          <th>#</th>
+          <th>Practical Name</th>
+          <th>Link</th>
+          <th>Status</th>
+          <th>Tools</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.</td>
+          <td ><a href="practical1.html">Practical-1</td>
+          <td id="check">Checked</td>
+          <td>
+            <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+            <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+            
+        </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Live Your First Web page on Git-Hub.</td>
+            <td><a href="practical2.html">Practical-2</td>
+                <td id="check">Checked</td>
+                <td>
+                    <i class="fa fa-pencil " aria-hidden="true" style="color: grey; font-size: 20px" ></i>
+                    <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Create a web page showing a basic html structure using charcter Entities and Span tag.</td>
+            <td><a href="practical3.html">Practical-3</td>
+                <td id="check">Checked</td>
+                <td>
+                    <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                    <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Create a Website having list of all pratical and their individual pratical Page Links.</td>
+            <td><a href="practical11.html">Practical-4</td>
+                <td id="check">Checked</td>
+                <td>
+                    <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                    <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                </td>
+          </tr>
+          <tr><!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Practical-11</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            </head>
+            <style>
+                  table{
+                    border: 2px solid;
+                    border-collapse: collapse;
+                    border-color: darkslategray;
+            
+                  }
+                  th,td {
+                    padding: 10px;
+                  }
+                  th {
+                    text-align: left;
+                  }
+                  tr {
+                      border: 1px solid grey;
+                      
+                  }
+                  #cap
+                  {
+                      border: none;
+                      background-color: darkslategray;
+                      color: white;
+                      padding: 15px;
+                      font-size: 20px;
+                  }
+                   td{
+                      font-family: 'Times New Roman', Times, serif;
+                      border: none;
+                      
+                  }
+                  tr td a
+                  {
+                      text-decoration: none;
+                      color: grey;
+                  }
+                  #check{
+                      color: green;
+                      font-weight: bold;
+                  }
+               
+                
+                  
+            </style>
+            <body>
+                <table width="100%" align="center">
+                    <caption id="cap">
+                      FullStack Live Practical Book
+                    </caption>
+                    <tr>
+                      <th>#</th>
+                      <th>Practical Name</th>
+                      <th>Link</th>
+                      <th>Status</th>
+                      <th>Tools</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.</td>
+                      <td ><a href="practical1.html">Practical-1</td>
+                      <td id="check">Checked</td>
+                      <td>
+                        <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                        <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                        
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Live Your First Web page on Git-Hub.</td>
+                        <td><a href="practical2.html">Practical-2</td>
+                            <td id="check">Checked</td>
+                            <td>
+                                <i class="fa fa-pencil " aria-hidden="true" style="color: grey; font-size: 20px" ></i>
+                                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Create a web page showing a basic html structure using charcter Entities and Span tag.</td>
+                        <td><a href="practical3.html">Practical-3</td>
+                            <td id="check">Checked</td>
+                            <td>
+                                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Create a Website having list of all pratical and their individual pratical Page Links.</td>
+                        <td><a href="practical11.html">Practical-4</td>
+                            <td id="check">Checked</td>
+                            <td>
+                                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Create a Web-Page showing the use of Image-Map in the Web Application.</td>
+                        <td><a href="practical5.html">Practical-5</td>
+                            <td id="check">Checked</td>
+                            <td>
+                                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Create Layout Using Css Layout Properties</td>
+                        <td><a href="practical6.html">Practical-6</td>
+                            <td id="check">Checked</td>
+                            <td>
+                                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Create Layout Using DIV tags.</td>
+                        <td><a href="practical7.html">Practical-7</td>
+                            <td id="check">Checked</td>
+                            <td>
+                                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Create a Web Page having Fixed Navigation Bar with the given content..</td>
+                        <td><a href="practical8.html">Practical-8</a></td>
+                        <td id="check">Checked</td>
+                        <td>
+                            <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+                        <td><a href="practical9.html">Practical-9</a></td>
+                        <td id="check">Checked</td>
+                        <td>
+                            <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td >Create a Side BAr  Responsive Navigation Bar.</td>
+                        <td><a href="practical10.html">Practical-10</a></td>
+                        <td style="color: red; font-weight: bold;">Unchecked</td>
+                        <td>
+                            <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                            <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                        </td>
+                      </tr>
+                   
+                  </table>
+                </body>
+              </html>
+              
+            </body>
+            </html>
+            <td>5</td>
+            <td>Create a Web-Page showing the use of Image-Map in the Web Application.</td>
+            <td><a href="practical5.html">Practical-5</td>
+                <td id="check">Checked</td>
+                <td>
+                    <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                    <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Create Layout Using Css Layout Properties</td>
+            <td><a href="practical6.html">Practical-6</td>
+                <td id="check">Checked</td>
+                <td>
+                    <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                    <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Create Layout Using DIV tags.</td>
+            <td><a href="practical7.html">Practical-7</td>
+                <td id="check">Checked</td>
+                <td>
+                    <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                    <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Create a Web Page having Fixed Navigation Bar with the given content..</td>
+            <td><a href="practical8.html">Practical-8</a></td>
+            <td id="check">Checked</td>
+            <td>
+                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Create a Responsive Web Layout with Responsive Navigation Bar.</td>
+            <td><a href="practical9.html">Practical-9</a></td>
+            <td id="check">Checked</td>
+            <td>
+                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td >Create a Side BAr  Responsive Navigation Bar.</td>
+            <td><a href="practical10.html">Practical-10</a></td>
+            <td style="color: red; font-weight: bold;">Unchecked</td>
+            <td>
+                <i class="fa fa-pencil" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+                <i class="fa fa-trash" aria-hidden="true" style="color: grey; font-size: 20px"></i>
+            </td>
+          </tr>
+       
+      </table>
+    </body>
+  </html>
+  
 </body>
-
 </html>
